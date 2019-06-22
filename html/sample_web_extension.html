@@ -1,0 +1,24 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <h1> Sample Web Extension</h1>
+  <div id="file-object"></div>
+
+  <script type="text/javascript">
+    var display = function () {
+        var div = document.getElementById("file-object");
+        var file_1 = getGfileObject('.');
+        var file_2 = new GFile('.');
+
+        var file_obj_stat = "===============<br>";
+		file_obj_stat += "getGfileObject() : " + file_1 + "  ----- Path is : " + file_1.getPath() + "<br>";
+        file_obj_stat += "new GFile() : " + file_2 + "  ----- Path is : " + file_2.getPath() + "<br>";
+        file_obj_stat += "===============<br>";
+        div.innerHTML = file_obj_stat;
+    }
+    display();
+  </script>
+</body>
+</html>

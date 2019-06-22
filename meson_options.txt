@@ -1,0 +1,15 @@
+############
+# Features #
+############
+
+option('webkit_port',
+        type: 'string',
+        value: 'gtk',
+        description: 'Choose the webkit port, suported options are wpe and gtk'
+)
+
+option('extension_path',
+        type: 'string',
+        value: 'webkit/web-extensions',
+        description: 'Realtive path to install the web-extension. This will be appended to library install path of webkit'
+)
